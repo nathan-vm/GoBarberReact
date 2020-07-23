@@ -140,7 +140,13 @@ const Dashboard: React.FC = () => {
         <HeaderContent>
           <img src={logoImg} alt="GoBarber logo" />
           <Profile>
-            <img src={user.avatar_url} alt={user.name} />
+            <img
+              src={
+                user.avatar_url ||
+                'https://assets.newglue.com/assets/avatar_placeholder-c4a9963ad86c68649100b476add586667aaaf4672a3dbfd6abf0e7338f4f5337.jpg'
+              }
+              alt={user.name}
+            />
             <div>
               <span>Bem vindo,</span>
 
@@ -168,7 +174,10 @@ const Dashboard: React.FC = () => {
               <strong>Atendimento a seguir</strong>
               <div>
                 <img
-                  src={nextAppointment?.user.avatar_url}
+                  src={
+                    nextAppointment?.user.avatar_url ||
+                    'https://assets.newglue.com/assets/avatar_placeholder-c4a9963ad86c68649100b476add586667aaaf4672a3dbfd6abf0e7338f4f5337.jpg'
+                  }
                   alt={nextAppointment?.user.name}
                 />
                 <strong>{nextAppointment?.user.name}</strong>
@@ -194,7 +203,10 @@ const Dashboard: React.FC = () => {
 
                 <div>
                   <img
-                    src={appointment.user.avatar_url}
+                    src={
+                      appointment.user.avatar_url ||
+                      'https://assets.newglue.com/assets/avatar_placeholder-c4a9963ad86c68649100b476add586667aaaf4672a3dbfd6abf0e7338f4f5337.jpg'
+                    }
                     alt={appointment.user.name}
                   />
                   <strong>{appointment.user.name}</strong>
@@ -215,7 +227,10 @@ const Dashboard: React.FC = () => {
 
                 <div>
                   <img
-                    src={appointment.user.avatar_url}
+                    src={
+                      appointment.user.avatar_url ||
+                      'https://assets.newglue.com/assets/avatar_placeholder-c4a9963ad86c68649100b476add586667aaaf4672a3dbfd6abf0e7338f4f5337.jpg'
+                    }
                     alt={appointment.user.name}
                   />
                   <strong>{appointment.user.name}</strong>
